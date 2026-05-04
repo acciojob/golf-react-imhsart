@@ -15,7 +15,7 @@ class App extends Component {
     };
 
     buttonClickHandler() {
-        this.setState({...this.state, renderBall: true})
+        this.setState({renderBall: true})
    }
     renderBallOrButton() {
 		if (this.state.renderBall) {
@@ -29,7 +29,6 @@ class App extends Component {
            this.setState(prev => ({
                 posi: prev.posi+5,
                 ballPosition: {
-                    ...prev.ballPosition,
                     left: `${parseInt(prev.ballPosition.left)+5}px`
                 }
            }))
