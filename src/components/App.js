@@ -7,7 +7,7 @@ class App extends Component {
         this.state = {
             renderBall: false,
             posi : 0,
-            ballPosition: { left: "0px" }
+            ballPosition: { left: "5px" }
         };
         this.renderChoice = this.renderBallOrButton.bind(this)
         this.buttonClickHandler = this.buttonClickHandler.bind(this)
@@ -28,7 +28,7 @@ class App extends Component {
         if (e.key === 'ArrowRight') {
             this.setState(prev => ({
                 posi: prev.posi + 5,
-                ballPosition: { left: "5px" }
+                ballPosition: { left: `${prev.posi + 5}px` }
             }));
         }
     }
