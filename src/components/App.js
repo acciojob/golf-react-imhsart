@@ -24,14 +24,12 @@ class App extends Component {
 		    return <button className="start" onClick={this.buttonClickHandler} >Start</button>
 		}
     }
-    moveBall(e){
-        if(e.key === 'ArrowRight'){
-           this.setState(prev => ({
-                posi: prev.posi+5,
-                ballPosition: {
-                    left: `${parseInt(prev.ballPosition.left)+5}px`
-                }
-           }))
+    moveBall(e) {
+        if (e.key === 'ArrowRight') {
+            this.setState(prev => ({
+                posi: prev.posi + 5,
+                ballPosition: { left: `${prev.posi + 5}px` }
+            }));
         }
     }
     // bind ArrowRight keydown event
